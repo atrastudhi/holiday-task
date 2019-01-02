@@ -2,7 +2,9 @@ const Item = require('../models/item');
 
 module.exports = {
   find: (req, res) => {
-    Item.find()
+    Item.find({
+      method: req.params.method
+    })
     .then(item => {
       res.status(200).json({
         items: item

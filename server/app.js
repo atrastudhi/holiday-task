@@ -14,6 +14,7 @@ db.once('open', function() {
 var usersRouter = require('./routes/users');
 const itemRouter = require('./routes/item');
 const transactionRouter = require('./routes/transaction');
+const cartRouter = require('./routes/cart')
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/user', usersRouter);
 app.use('/item', itemRouter);
 app.use('/transaction', transactionRouter);
+app.use('/cart', cartRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 
 module.exports = {
   find: (req, res) => {
-    Transaction.find()
+    Transaction.find({
+      user: mongoose.Types.ObjectId(req.decoded._id)
+    }).populate('user').populate('item').exec()
     .then(transaction => {
       res.status(200).json({
         transaction: transaction

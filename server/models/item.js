@@ -4,11 +4,11 @@ const Schema = mongoose.Schema
 const itemSchema = new Schema ({
   name: {
     type: String,
-    require: [true, 'item name field cannot be empty']
+    required: [true, 'item name field cannot be empty']
   },
   price: {
     type: Number,
-    require: [true, 'price field cannot be empty']
+    required: [true, 'price field cannot be empty']
   },
   method: {
     type: String,
