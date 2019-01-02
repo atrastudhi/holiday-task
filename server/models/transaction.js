@@ -13,6 +13,14 @@ const transactionSchema = new Schema ({
   date: {
     type: Date,
     required: true
+  },
+  method: {
+    type: String,
+    required: true
+  },
+  total: {
+    type: Number,
+    required: true
   }
 })
 

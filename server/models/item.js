@@ -9,6 +9,10 @@ const itemSchema = new Schema ({
   price: {
     type: Number,
     require: [true, 'price field cannot be empty']
+  },
+  method: {
+    type: String,
+    required: true
   }
 })
 

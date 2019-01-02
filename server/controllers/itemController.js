@@ -17,7 +17,8 @@ module.exports = {
   create: (req, res) => {
     Item.create({
       name: req.body.name,
-      price: req.body.price
+      price: req.body.price,
+      method: req.body.method
     })
     .then(item => {
       res.status(200).json({

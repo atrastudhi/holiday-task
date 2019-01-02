@@ -39,7 +39,6 @@ const userSchema = new Schema ({
 })
 
 userSchema.pre('save', function (next) {
-  console.log(this.password, '=============')
   this.password = helpers.hash(this.password)
   next()
 })
